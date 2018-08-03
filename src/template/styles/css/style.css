@@ -388,11 +388,19 @@ input, textarea, button {
   .btn_red {
     color: #fff;
     background-color: #ff695a; }
+    .btn_red:hover {
+      background-color: #f31600; }
   .btn_black {
     color: #fff;
     background-color: #383033; }
+    .btn_black:hover {
+      background-color: #f31600; }
   .btn_transparent {
     border: 1px solid #afafaf; }
+    .btn_transparent:hover {
+      color: #fff;
+      background-color: #f31600;
+      border-color: #f31600; }
   .btn_radius {
     -webkit-border-radius: 3px;
             border-radius: 3px; }
