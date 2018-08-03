@@ -3,11 +3,14 @@
 @import fonts.sass
 @import grid.sass
 @import '../../libs/fancybox/dist/jquery.fancybox.css'
+@import '../../libs/slick-carousel/slick/slick.css'
 
 
 /* Global settings */
 $font-size: 16px
-$font-family-1: 'Tahoma', sans-serif
+$font-family-1: 'Raleway', sans-serif
+$font-family-2: 'MyriadPro', sans-serif
+$font-family-3: 'Ebrima', sans-serif
 $color-1: #000
 
 
@@ -53,16 +56,61 @@ input
 input, textarea, button
  outline: none
 
+.icon
+	display: inline-block
+	vertical-align: middle
+
 /* Form elements */
 .input
 	position: relative
 	&__wrap
 		display: block
 		font-size: $font-size
-		font-family: $font-family-1
+		font-family: $font-family-2
 		background: white
 		width: 100%
+		height: 52px
+		text-transform: uppercase
+		&::placeholder
+			color: #4b4141
+			opacity: 1
+	&_shadow
+		.input
+			&__wrap
+				border-radius: 3px
+				box-shadow: 0 11px 32px 4px rgba(54, 56, 56, 0.16)
 
+	&_border
+		.input
+			&__wrap
+				height: 57px
+				border: 1px solid #afafaf
+				padding: 0 20px
+
+				
+	&_mid
+		.input
+			&__wrap
+				text-align: center
+				
+	&__icon
+		position: absolute
+		top: 50%
+		left: 21px
+		transform: translateY(-50%)
+		font-size: 0
+		margin-top: -1px
+		+ .input__wrap
+			padding-left: 45px
+			padding-right: 45px
+
+	&__title
+		font-size: 22px
+		font-weight: 500
+		
+		
+				
+	
 
 .textarea
 	position: relative
@@ -76,13 +124,40 @@ input, textarea, button
 
 .btn
 	position: relative
-	display: inline-block
-	font-size: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: $font-size
 	font-family: $font-family-1
 	cursor: pointer
 	text-align: center
 	transition: .3s
+	&_red
+		color: #fff
+		background-color: #ff695a
+	&_black
+		color: #fff
+		background-color: #383033
+	&_transparent
+		border: 1px solid #afafaf
+	&_radius
+		border-radius: 3px
 
+	&_normal
+		font-size: 19px
+		letter-spacing: 0.36px
+		height: 46px
+		padding-bottom: 2px
+		font-weight: 600
+
+	&_big
+		font-size: 14px
+		height: 62px
+
+	&_large
+		font-size: 20px
+		height: 83px
+		font-weight: 600
 .input input, .textarea textarea
 	transition: .3s
 
@@ -107,8 +182,589 @@ input, .btn, .slick-slide, textarea
 
 .main-wrap
 	// overflow-x: hidden
+	max-width: 1920px
+	margin-left: auto
+	margin-right: auto
 
 
+
+.header
+
+
+.panel
+	padding-top: 29px
+	padding-bottom: 37px
+	&__logo
+		width: 193px
+		a
+			display: block
+		
+	&__contacts
+		text-align: right
+		padding-top: 8px
+	&__time
+		font-size: 14px
+		color: #b2b2b2
+		margin-bottom: 3px
+		
+	&__phone
+		font-family: $font-family-3
+		font-size: 33px
+		line-height: 33px
+		font-weight: 700
+		margin-bottom: 5px
+		a
+			color: #f56945
+		
+	&__nav
+		ul
+			justify-content: flex-end
+		li
+			font-size: 14px
+			margin-left: 25px
+		a
+			position: relative
+			color: #f45127
+			border-bottom: 1px solid #f45127
+			
+		a[href^='#']
+			color: #b2b2b2
+			border-bottom: 1px dotted #b2b2b2
+		a
+			&:hover
+				border-color: transparent
+
+
+
+.nav
+	background-color: #f45127
+	padding-top: 19px
+	padding-bottom: 19px
+	ul
+
+	li
+		margin-right: 20px
+		&:last-of-type
+			margin-right: 0
+	a
+		color: #fff
+		font-weight: 700
+		text-transform: uppercase
+		letter-spacing: 0.42px
+		position: relative
+		display: block
+		// &:before
+		// 	display: block
+		// 	position: absolute
+		// 	content: ''
+		// 	width: 100%
+		// 	height: 2px
+		// 	left: 0
+		// 	right: 0
+		// 	bottom: -16px
+		// 	background-color: #fff
+		&:hover
+			color: #fff200
+
+
+.mobile-btn
+	width: 36px
+	margin-left: auto
+	display: none
+	cursor: pointer
+	span
+		position: relative
+		display: block
+		background-color: #fff
+		height: 3px
+		margin-bottom: 7px
+		transition: .3s
+		&:last-of-type
+			margin-bottom: 0
+	&_toggle
+		span
+			&:nth-of-type(1)
+				top: 10px
+				transform: rotate(45deg)
+			&:nth-of-type(2)
+				opacity: 0
+			&:nth-of-type(3)
+				top: -10px
+				transform: rotate(-45deg)
+
+
+.slider
+	&__list
+		img
+			margin-left: auto
+			margin-right: auto
+		
+	&__nav
+		margin-top: 17px
+		ul
+			justify-content: center
+		li
+			margin-left: 12px
+			margin-right: 12px
+			&.slick-active
+				button
+					background-color: #f45127
+		button
+			width: 12px
+			height: 12px
+			font-size: 0
+			background-color: #626262
+			border-radius: 50%
+			cursor: pointer
+		
+.intro
+	text-align: center
+	padding-top: 40px
+	padding-bottom: 55px
+	background: url('../../img/bg/intro.png') no-repeat center -60px
+	// overflow-x: hidden
+	// overflow-y: visible
+	margin-bottom: 95px
+	&__title
+		margin-bottom: 2px
+		position: relative
+		&:after
+			position: absolute
+			content: ''
+			width: 128px
+			height: 103px
+			top: 5px
+			right: 180px
+			background: url('../../img/bg/shape.png') no-repeat center
+		img
+			margin-left: auto
+			margin-right: auto
+
+	&__desc
+		font-family: $font-family-2
+		font-size: 18px
+		letter-spacing: 3.6px
+		text-transform: uppercase
+		color: #fff
+	.case
+		&:after
+			content: ''
+			position: absolute
+			right: -347px
+			bottom: -200px
+			width: 347px
+			height: 326px
+			background: url('../../img/bg/tomatos.png') no-repeat center
+		
+		
+.catalog
+	z-index: 2
+	position: relative
+	padding-top: 112px
+	margin-bottom: -100px
+	&__block
+		margin-left: -75px
+		margin-right: -75px
+		+ .catalog__block
+			margin-top: -20px
+	&__title
+		position: relative
+		font-size: 36px
+		letter-spacing: 0.54px
+		margin-bottom: 50px
+		&:after
+			position: absolute
+			content: ''
+			left: 0
+			right: 0
+			top: 23px
+			height: 3px
+			background-color: #ff695a
+		span
+			display: inline-block
+			background-color: #fff
+			z-index: 1
+			position: relative
+			padding-right: 35px
+		
+	&__list
+		justify-content: space-between
+		
+	&__item
+		width: 300px
+		margin-bottom: 90px
+
+	&__data
+		width: 245px
+		margin-left: auto
+		margin-right: auto
+
+	&__img
+		margin-bottom: 22px
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 245px
+		padding-left: 5px
+		padding-right: 5px
+		img
+			display: block
+		
+
+	&__name
+		font-size: 24px
+		font-weight: 900
+		letter-spacing: 0.36px
+		margin-bottom: 6px
+		text-align: center
+
+	&__text
+		font-size: 18px
+		color: #606060
+		
+	&__price
+		font-size: 31px
+		font-weight: 800
+		letter-spacing: 0.36px
+		margin-bottom: 40px
+
+	&__btn
+		width: 185px
+		margin-left: auto
+		margin-right: auto
+		
+
+.callback
+	z-index: 1
+	background-image: url('../../img/bg/bg-icon.png')
+	background-repeat: no-repeat
+	background-position: center 60px
+	background-color: #f7f7f7
+	text-align: center
+	padding-top: 140px
+	padding-bottom: 215px
+	&__title
+		font-size: 30px
+		font-weight: 300
+		text-transform: uppercase
+		color: #4b4141
+
+	&__desc
+		color: #787878
+		font-family: $font-family-2
+		line-height: 24px
+		margin-bottom: 55px
+
+	&__form
+		width: 845px
+		margin-left: auto
+		margin-right: auto
+		
+	&__input
+		width: 262px
+		
+	&__btn
+		margin-top: 42px
+		width: 195px
+		margin-left: auto
+		margin-right: auto
+		
+
+.title
+	font-size: 36px
+	font-weight: 800
+
+.product
+	&__wrap
+		margin-left: -30px
+		margin-right: -30px
+		
+	&__left
+		width: 545px
+		margin-right: 110px
+
+	&__right
+		padding-top: 34px
+		width: calc(100% - 545px - 110px)
+
+	&__img
+		display: flex
+		height: 480px
+		justify-content: center
+		align-items: center
+		img
+		
+
+	&__title
+		margin-bottom: 18px
+		span
+			font-size: 20px
+			font-weight: 700
+			vertical-align: top
+			margin-left: 5px
+
+	&__text
+		font-size: 22px
+		line-height: 33px
+		margin-bottom: 54px
+
+	&__price
+		font-size: 45px
+		font-weight: 700
+		font-family: $font-family-2
+		
+
+	&__count
+		&-title
+			font-size: 22px
+			font-weight: 500
+			margin-right: 22px
+			color: #505050
+		&-wrap
+			width: 150px
+		
+
+	&__btn
+		width: 100%
+		margin-top: 55px
+		
+		
+.increment
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: center
+	border: 1px solid #000000
+	font-size: 0
+	&__input
+		width: 50%
+
+	&__btn
+		width: 25%
+		transition: .3s
+		cursor: pointer
+		&:hover
+			color: #fff
+			background-color: #ff6b5d
+		
+		
+
+	&__input input, &__btn
+		font-size: 23px
+		font-weight: 300
+		text-align: center
+
+	&__input
+		input
+			font-family: $font-family-1
+			text-align: center
+			width: 100%
+			display: block
+		
+
+.ya-share2
+	margin-top: 105px
+	text-align: center
+	&__list
+		display: block
+		text-align: center
+		
+		
+
+.contacts
+	&__title
+		margin-bottom: 25px
+		
+	&__text
+		color: #505050
+		font-size: 22px
+		line-height: 33px
+		font-weight: 500
+		margin-bottom: 45px
+		p
+			&:last-of-type
+				margin-top: 22px
+		a
+			color: #505050
+		
+		
+	&__form
+		width: 740px
+		padding-top: 18px
+
+	&__map
+		width: calc(100% - 740px - 30px)
+		border: 8px solid #afafaf
+		margin-left: 30px
+		font-size: 0
+		
+	&__input
+		margin-bottom: 25px
+		.input
+			&__title
+				color: #505050
+				width: 180px
+				
+			&__wrap
+				width: calc(100% - 180px)
+			
+	&__btn
+		width: 290px
+		margin-left: 180px
+		font-size: 22px
+		font-weight: 500
+		
+.cart
+	&__title
+		margin-bottom: 45px
+
+	&__list
+		text-align: center
+		
+	&__line
+		
+		
+	&__item
+		&_name, &_product
+			width: 46%
+			text-align: left
+		&_price, &_count, &_total
+			width: 18%
+
+	&__head
+		.cart
+			&__item
+				font-size: 22px
+				font-weight: 600
+				color: #505050
+	&__body
+		.cart
+			&__item
+				padding-top: 55px
+				padding-bottom: 60px
+				&_price, &_count, &_total
+					font-size: 26px
+					font-weight: 800
+					span
+						display: none
+
+			&__line
+				border-bottom: 1px solid #000000
+				&:last-of-type
+					border-bottom: none
+
+				
+
+	&__product
+		display: flex
+		flex-wrap: nowrap
+		align-items: center
+		&-img
+			width: 125px
+		&-content
+			width: calc(100% - 125px)
+			padding-left: 32px
+		&-title
+			font-size: 26px
+			font-weight: 700
+			margin-bottom: 5px
+			
+		&-text
+			font-weight: 600
+			color: #505050
+			line-height: 25.5px
+			strong
+				color: #000
+		
+	&__return
+		width: 230px
+		color: #343434
+		font-size: 26px
+		font-weight: 600
+
+	&__total
+		margin-left: auto
+		margin-right: 32px
+		font-size: 26px
+		font-weight: 800
+		color: #343434
+
+	&__btn
+		width: 335px
+		font-size: 23px
+		font-weight: 500
+		
+
+		
+		
+		
+		
+
+.page
+	margin-bottom: 140px
+
+
+
+
+
+.footer
+	margin-top: -84px
+	&__top
+		z-index: 2
+		position: relative
+		color: #fff
+		padding-top: 175px
+		padding-bottom: 160px
+		background: url('../../img/bg/footer.png') no-repeat center top
+		.case
+			padding-left: 92px
+		
+	&__left
+		width: 415px
+
+	&__right
+		width: 495px
+		
+	&__title
+		font-size: 30px
+		font-weight: 300
+		text-transform: uppercase
+		margin-bottom: 29px
+
+	&__sub-block
+		margin-right: 50px
+		line-height: 24px
+		font-weight: 500
+		font-family: $font-family-2
+		&:last-of-type
+			margin-right: 0
+		a
+			color: #fdb902
+			&:hover
+				border-color: #fdb902	
+	.color-yellow
+		color: #fdb902
+
+	&__bottom
+		z-index: 1
+		position: relative
+		background-color: #121212
+
+	&__copy
+		padding-top: 160px
+		padding-bottom: 52px
+		font-size: 14px
+		color: #585757
+		font-family: $font-family-2
+		text-align: center
+		text-transform: uppercase
+		margin-top: -90px
+		
+		
+		
+		
+
+		
 
 
 

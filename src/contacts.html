@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="template/styles/css/style.css" />
+	<link rel="stylesheet" href="template/styles/css/responsive.css" />
+	<script src="template/scripts/libs.js"></script>
+	<script src="template/scripts/common.js"></script>
+	<!--[if lt IE 9]>
+	<script>
+		document.createElement('header');
+		document.createElement('nav');
+		document.createElement('main');
+		document.createElement('section');
+		document.createElement('article');
+		document.createElement('aside');
+		document.createElement('footer');
+	</script>
+	<![endif]-->
+</head>
+<body>
+<div class="main-wrap">
+	<header class="header">
+		<div class="panel">
+			<div class="panel__wrap case row between">
+				<div class="panel__logo"><a href=""><img src="upload/logo/logo.png" alt=""></a></div>
+				<div class="panel__contacts">
+					<div class="panel__time">Бесплатная доставка с 11:00 до 23:00</div>
+					<div class="panel__phone"><a href="tel:+79627701220">+7 (962) 770-12-20</a></div>
+					<div class="panel__nav">
+						<ul>
+							<li><a href="">Контакты</a></li>
+							<li><a href="#callback">Перезвони мне</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="nav">
+			<div class="nav__wrap case">
+				<div class="mobile-btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<ul>
+					<li><a href="#pizza">Пицца</a></li>
+					<li><a href="#rolls">Роллы</a></li>
+					<li><a href="#salad">Салаты</a></li>
+					<li><a href="#">Китайская лапша</a></li>
+					<li><a href="#">Напитки</a></li>
+					<li><a href="">Корзина</a></li>
+					<li><a href="">Контакты </a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="intro">
+			<div class="intro__case case">
+				<div class="intro__title"><img src="upload/logo/logo-text.png" alt=""></div>
+				<div class="intro__desc">ВКУСНАЯ ПИЦЦА ПО ПРЕВЛИКАТЕЛЬНОЙ ЦЕНЕ!</div>
+			</div>
+		</div>
+	</header>
+
+
+	<div class="main">
+		<div class="contacts page">
+			<div class="contacts__case case">
+				<div class="contacts__title title">Контактная информация</div>
+				<div class="contacts__text">
+					<p>Наш адрес: г. Брянск, ул. Фокина, д. 100</p>
+					<p>Номер телефона: <a href="tel:+79627701050">+7 (962) 770-10-50</a></p>
+					<p>Жалобы и предложения: <a href="mailto:support@брянск-пицца.рф">support@брянск-пицца.рф</a></p>
+				</div>
+				<div class="contacts__wrap row i-top">
+					<div class="contacts__form">
+						<div class="contacts__input input input_border row i-mid">
+							<label class="input__title">ФИО: </label>
+							<input type="text" class="input__wrap">
+						</div>
+						<div class="contacts__input input input_border input_phone row i-mid">
+							<label class="input__title">Телефон: </label>
+							<input type="text" class="input__wrap">
+						</div>
+						<div class="contacts__input input input_border row i-mid">
+							<label class="input__title">Email: </label>
+							<input type="text" class="input__wrap">
+						</div>
+						<div class="contacts__input input input_border row i-mid">
+							<label class="input__title">Сообщение: </label>
+							<input type="text" class="input__wrap">
+						</div>
+						<button class="contacts__btn btn btn_red btn_big">Отправить</button>
+					</div>
+					<div class="contacts__map"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Abc718690441c96f32d8ce2f74ff6bae272cbfba7c468f6bd95c3f3a4675e769f&amp;source=constructor" width="100%" height="305" frameborder="0"></iframe></div>
+				</div>
+			</div>
+		</div>
+		<div class="callback" id="callback">
+			<div class="callback__case case">
+				<div class="callback__wrap">
+					<div class="callback__title">ЗАКАЗАТЬ ЗВОНОК</div>
+					<div class="callback__desc">
+						<p>Мы перезвоним Вам в течении 10-ти минут.</p>
+						<p>Либо позвоните нам сами: +7 (962) 770-10-50</p>
+					</div>
+					<div class="callback__form row between">
+						<div class="callback__input input input_mid input_shadow input_date">
+							<label class="input__icon"><i class="icon icon-calendar"></i></label>
+							<input type="text" class="input__wrap" placeholder="08/06/2017">
+						</div>
+						<div class="callback__input input input_mid input_shadow input_time">
+							<label class="input__icon"><i class="icon icon-time"></i></label>
+							<input type="text" class="input__wrap" placeholder="09:00">
+						</div>
+						<div class="callback__input input input_mid input_shadow input_name">
+							<label class="input__icon"><i class="icon icon-user"></i></label>
+							<input type="text" class="input__wrap" placeholder="ВАШЕ ИМЯ">
+						</div>
+						<button class="callback__btn btn btn_radius btn_black btn_big">ОТПРАВИТЬ</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="footer">
+		<div class="footer__top">
+			<div class="case row between">
+				<div class="footer__block">
+					<div class="footer__title">Время работы</div>
+					<div class="footer__wrap row">
+						<div class="footer__sub-block">
+							<p class="color-yellow">Понедельник - пятница</p>
+							<p>9:00 - 23:00</p>
+						</div>
+						<div class="footer__sub-block">
+							<p class="color-yellow">Суббота & Воскресение</p>
+							<p>9:00 - 02:00</p>
+						</div>
+					</div>
+				</div>
+				<div class="footer__block">
+					<div class="footer__title">Где нас найти?</div>
+					<div class="footer__wrap row">
+						<div class="footer__sub-block">
+							<p>г. Брянск, <br>улица Партизанская 137</p>
+						</div>
+						<div class="footer__sub-block">
+							<p>Есть предложения? <br>Наша почта <a href="mailto:info@брянск-пицца.рф">info@брянск-пицца.рф</a><br>или<br>Телефон <a href="tel:+79267222050">+7 (926) 722-20-50</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="case">
+				<div class="footer__copy">© ВсЕ ПРАВА ЗАЩИЩЕНЫ. БРЯНСК-ПИЦЦА.РФ 2018</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

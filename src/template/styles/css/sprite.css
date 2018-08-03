@@ -1,0 +1,17 @@
+.icon-calendar {
+  background-image: url(../../img/sprite.png);
+  background-position: 0px 0px;
+  width: 16px;
+  height: 17px; }
+
+.icon-time {
+  background-image: url(../../img/sprite.png);
+  background-position: -16px 0px;
+  width: 15px;
+  height: 15px; }
+
+.icon-user {
+  background-image: url(../../img/sprite.png);
+  background-position: 0px -17px;
+  width: 12px;
+  height: 14px; }

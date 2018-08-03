@@ -1,4 +1,40 @@
-@media screen and (max-width: 1199px)
+@media screen and (max-width: 1350px)
+	.catalog
+		&__wrap
+
+		&__block
+			margin-left: 0
+			margin-right: 0
+
+		&__list
+			margin-left: -5px
+			margin-right: -5px
+			
+		&__item
+			width: 25%
+			padding-left: 5px
+			padding-right: 5px
+			
+	.product
+		&__wrap
+			margin-left: 0
+			margin-right: 0
+
+		&__left
+			width: 500px
+			margin-right: 50px
+
+		&__right
+			width: calc(100% - 500px - 50px)
+			
+			
+	.intro
+		.case
+			&:after
+				display: none
+
+
+@media screen and (max-width: 1230px)
 	.case
 		width: 950px
 	
@@ -8,6 +44,129 @@
 	.hidden-md
 		display: none
 
+	.panel
+		padding-top: 15px
+		padding-bottom: 15px
+
+	.catalog
+		padding-top: 30px
+		margin-bottom: 0
+		&__title
+			margin-bottom: 30px
+		&__list
+			justify-content: center
+			
+		&__item
+			width: 33.333%
+			margin-bottom: 50px
+
+		&__img
+			margin-bottom: 10px
+
+		&__price
+			margin-bottom: 15px
+			
+			
+	.callback
+		padding-top: 100px
+		&__form
+			width: 100%
+
+		&__input
+			width: 31%
+			
+	.intro
+		margin-bottom: 20px
+		&__title
+			&:after
+				display: none
+
+			
+	.page
+		margin-bottom: 50px
+
+	.product
+		&__share
+			.ya-share2
+				margin-top: 20px
+
+	.contacts
+		&__form
+			width: 520px
+		&__map
+			width: calc(100% - 520px - 20px)
+			margin-left: 20px
+
+		&__input
+			.input
+				&__wrap
+					height: 48px
+
+		&__btn
+			height: 52px
+			width: calc(100% - 180px)
+			
+					
+
+			
+	.footer
+		&__top
+			.case
+				padding-left: 15px
+
+		&__bottom
+			pt
+
+		&__copy
+			padding-top: 100px
+			padding-bottom: 30px
+
+			
+	.cart
+		&__title
+			margin-bottom: 10px
+			
+		&__head
+			display: none
+
+		&__item
+			width: auto
+			margin-right: 10px
+			&_product
+				width: 100%
+
+		&__body
+			.cart
+				&__line
+					align-items: center
+					padding-top: 25px
+					padding-bottom: 25px
+				&__item
+					padding-top: 0
+					padding-bottom: 0
+					&_prodict
+						margin-bottom: 5px
+					&_price, &_count, &_total
+						width: 100%
+						text-align: left
+						font-size: 16px
+						color: #505050
+						font-weight: 600
+						margin-bottom: 5px
+						padding-left: (125px + 32px)
+						span
+							display: inline-block
+							color: #000
+							font-weight: 800
+							margin-right: 6px
+				
+			
+
+			
+			
+			
+			
+			
 
 	
 @media screen and (max-width: 992px)
@@ -20,6 +179,80 @@
 	.hidden-sm
 		display: none
 
+	.nav
+		ul
+			justify-content: center
+		li
+			margin-right: 7px
+			margin-left: 7px
+			&:first-of-type
+				margin-left: 0
+
+	.product
+		&__left, &__right
+			width: 100%
+		&__left
+			margin-right: 0
+			
+		&__share
+			display: none
+
+		&__title
+			text-align: center
+			margin-bottom: 0
+		&__img
+			height: auto
+			
+		&__right
+			padding-top: 15px
+			
+		&__text
+			margin-bottom: 10px
+			
+		&__btn
+			margin-top: 20px
+			height: 64px
+			
+			
+	.cart
+		&__return, &__btn
+			width: 160px
+
+
+	.contacts
+		&__text
+			font-size: 18px
+			line-height: 24px
+			margin-bottom: 30px
+			p
+				&:last-of-type
+					margin-top: 0
+			
+		&__map, &__form
+			width: 100%
+			
+		&__map
+			order: 1
+			margin-left: 0
+
+		&__form
+			order: 2
+			
+			
+	
+	.footer
+		&__top
+			padding-top: 70px
+			padding-bottom: 90px
+
+		&__block
+			margin-bottom: 60px
+			&:last-of-type
+				margin-bottom: 0
+			
+			
+			
+			
 
 	
 @media screen and (max-width: 767px)
@@ -31,5 +264,210 @@
 	
 	.hidden-xs
 		display: none
-	
 
+	.panel
+		.case
+			display: block
+		&__logo
+			text-align: center
+			margin-left: auto
+			margin-right: auto
+			
+		&__time
+			margin-bottom: 0
+			
+		&__phone
+			font-size: 26px
+			
+
+		&__contacts
+			text-align: center
+
+		&__nav
+			ul
+				justify-content: center
+			
+
+	.nav
+		padding-top: 14px
+		padding-bottom: 14px
+		ul
+			display: none
+			padding-top: 10px
+		li
+			width: 100%
+			margin-left: 0
+			margin-right: 0
+			font-size: 20px
+			margin-bottom: 10px
+			&:last-of-type
+				margin-bottom: 0
+
+	.mobile-btn
+		display: block
+				
+	.slider
+		display: none
+
+	.catalog
+		padding-top: 20px
+		&__item
+			width: 100%
+			margin-bottom: 35px
+
+		&__title
+			margin-bottom: 20px
+			span
+				padding-right: 15px
+			
+			
+	.callback
+		background-image: none
+		padding-top: 35px
+		padding-bottom: 120px
+		&__input
+			width: 100%
+			margin-bottom: 15px
+		&__btn
+			margin-top: 0
+			width: 100%
+			height: 52px
+
+	.title
+		font-size: 26px
+
+	.product
+		&__text
+			font-size: 18px
+			line-height: normal
+			text-align: center
+
+		&__title
+			margin-bottom: 10px
+			
+
+		&__price
+			font-size: 26px
+			
+		&__control
+			display: block
+			text-align: center
+			
+		&__count
+			margin-top: 15px
+			&-title
+				display: none
+			
+			&-wrap
+				margin-left: auto
+				margin-right: auto
+	
+	.intro
+		&__title
+			margin-bottom: 10px
+
+	.cart
+		&__title
+			margin-bottom: -10px
+			
+		&__return
+			display: none
+			
+		&__return, &__total, &__btn
+			width: 100%
+
+		&__total
+			// margin-top: 15px
+			margin-bottom: 10px
+			
+
+		&__return, &__btn
+			height: 52px
+			font-size: 18px
+
+		&__item
+			margin-right: 0
+			&_price, &_count, &_total
+				padding-left: 0 !important
+			
+		&__product
+			display: block
+			&-img, &-content
+				width: 100%
+
+			&-content
+				padding-left: 0
+				padding-top: 10px
+
+			&-title
+				font-size: 22px
+			
+		&__body
+			.product
+				&__line
+					padding-bottom: 0
+			
+	.title
+		text-align: center
+
+	.footer
+		&__top
+			padding-top: 50px
+			padding-bottom: 45px
+
+
+		&__title
+			margin-bottom: 5px
+			text-align: center
+
+		&__block
+			margin-bottom: 20px
+			width: 100%
+			
+
+		&__sub-block
+			width: 100%
+			margin-bottom: 10px
+			
+		&__copy
+			padding-top: 110px
+			
+	.btn
+		&_large
+			height: 52px
+			
+			
+
+	.page
+		margin-bottom: 35px
+			
+	
+	.callback
+		&__desc
+			margin-bottom: 15px
+			p
+				display: inline
+
+
+	.contacts
+		.input
+			margin-bottom: 10px
+			&__title, &__wrap
+				display: block
+				width: 100%
+			&__title
+				font-size: 20px
+				margin-bottom: 4px
+		
+			&__wrap
+				height: 40px
+				padding-left: 15px
+				padding-right: 15px
+				
+				
+		&__btn
+			margin-left: 0
+			width: 100%
+			margin-top: 20px
+			
+			
